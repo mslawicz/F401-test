@@ -5,16 +5,18 @@
 
 #include "mbed.h"
 #include "stats_report.h"
+#include "platform/mbed_debug.h"
 
 DigitalOut led1(LED1);
 
 #define SLEEP_TIME                  500 // (msec)
-#define PRINT_AFTER_N_LOOPS         20
+#define PRINT_AFTER_N_LOOPS         100
 
 // main() runs in its own thread in the OS
 int main()
 {
     printf("Hello F401!\r\n");
+    debug("this is a debug message\r\n");
     SystemReport sys_state( SLEEP_TIME * PRINT_AFTER_N_LOOPS /* Loop delay time in ms */);
 
     int count = 0;

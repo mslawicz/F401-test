@@ -14,6 +14,7 @@ DigitalOut led1(LED1);
 // main() runs in its own thread in the OS
 int main()
 {
+    printf("Hello F401!\r\n");
     SystemReport sys_state( SLEEP_TIME * PRINT_AFTER_N_LOOPS /* Loop delay time in ms */);
 
     int count = 0;
